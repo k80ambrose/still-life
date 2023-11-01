@@ -16,21 +16,34 @@
     height: 500px;
     border: 1px solid black;
   }
-  .kettle {
-    position: absolute;
-  }
+  
   .cup {
-    
+    border: 1px solid black;
+    width: 88px;
+    height: 90px;
   }
-  .coffee {
-    
+  
+  .cup_1 {
+    position: absolute;
+    top: 100px;
+    left: 80px;
   }
-</style>
+  
+  .triangle {
+    width: 50%;
+    height: 90%;
+    background-color: red;
+    clip-path: polygon(0 0, 0% 100%, 91% 50%);
+  }
+
+  </style>
 
 <body>
-<div class="frame">
-				  	<div class="kettle">
-              
+  <div class="frame">
+  	<div class="cup cup_1">
+      <div class="triangle"></div>
+  </div>
+  	<div class="coffee">
   </div>
 </div>
 </body>
