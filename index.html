@@ -23,13 +23,13 @@
     height: 90px;
   }
   
-  .cup_1 {
+  .cup1 {
     position: absolute;
     top: 300px;
     left: 100px;
   }
   
-  .cup_2 {
+  .cup2 {
     position: absolute;
     top: 200px;
     left: 100px;
@@ -47,44 +47,46 @@
     height: 100%;
     position: absolute
   }
+  
   .base {
     clip-path: polygon(17% 69%, 80% 69%, 100% 100%, 0% 100%);
     background-color: silver;
   }
   
-  .coffeecan1 {
-    background-color: FDC90D;
-    opacity: 70%; 
+  .coffee {
+    background-image: linear-gradient(#FDC90D 66%, red 30%);
+    opacity: 80%; 
     width: 35%;
     height: 50%;
+  }
+ 
+  .can1 {
     position: absolute;
     top: 140px;
-    left: 280px;
+    left: 300px;
   }
   
-  .coffeecan2 {
-    background-color: FDC90D;
-    opacity: 70%; 
-    width: 35%;
-    height: 50%;
+  .can2 {
     position: absolute;
     top: 100px;
     left: 260px;
   }
+  
   </style>
 
 <body>
   <div class="frame">
-  	<div class="cup cup_1">
+  	<div class="cup cup1">
       <div class="stripes"></div>
       <div class="triangle"></div>
   </div>
-<div class="cup cup_2">
+<div class="cup cup2">
       <div class="stripes"></div>
       <div class="triangle"></div>
   </div>
-  	<div class="coffeecan1">
+  	<div class="coffee can1">
   </div>
-    	<div class="coffeecan2">
+    	<div class="coffee can2">
+  </div>
 </div>
 </body>
