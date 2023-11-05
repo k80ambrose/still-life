@@ -125,21 +125,79 @@
 .kettle {
   position: absolute;
   top: 250px; /* Adjust as needed */
-  left: 50px; /* Adjust as needed */
-  width: 100px; /* Adjust as needed */
-  height: 120px; /* Adjust as needed */
-  background-color: orange; /* Base color for kettle */
-  border-radius: 50px 50px 5px 5px; /* Adjust to match kettle shape */
+  left: 0px; /* Adjust as needed */
 }
 
+/* Kettle Pot */
+.kettle-pot {
+  position: absolute;
+  top: -90px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  width: 120px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
+  background-color: #ffa500; /* Example orange color */
+  border-radius: 50px 50px 0 0; /* Rounded top, flat bottom */
+  z-index: 2;
+}
+
+/* Kettle Lid */
 .kettle-lid {
   position: absolute;
-  top: 10px; /* Adjust as needed */
-  left: 45%; /* Adjust as needed */
-  width: 50%; /* Adjust as needed */
+  top: 1px; /* Adjust as needed */
+  left: 45px; /* Center relative to the kettle pot */
+  width: 50px; /* Adjust as needed */
   height: 20px; /* Adjust as needed */
-  background-color: darkorange; /* Lid color */
+  background-color: #ffa500; /* Orange color for the lid */
   border-radius: 50%;
+  z-index: 3;
+}
+
+/* Kettle Top */
+.kettle-top {
+  position: absolute;
+  top: 50px; /* Adjust as needed, should be at the top of the pot
+  left: 10%; /* Center relative to the kettle pot */
+  width: 60%; /* Adjust as needed */
+  height: 10px; /* Adjust as needed */
+  background-color: black; /* Black color for the top */
+  border-radius: 50%;
+  z-index: 4;
+}
+
+/* Kettle Handle */
+.kettle-handle {
+  position: absolute;
+  top: 40px; /* Adjust as needed, should be on the side of the pot */
+  left: -30px; /* Adjust as needed */
+  width: 20px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  background-color: black; /* Black color for the handle */
+  border-radius: 10px; /* Adjust to match handle shape */
+  z-index: 1;
+}
+
+/* Kettle Waist */
+.kettle-waist {
+  position: absolute;
+  top: 10px; /* Adjust based on the pot height */
+  left: 25px; /* Center relative to the kettle pot */
+  width: 50px; /* The waist is narrower */
+  height: 20px; /* Adjust as needed */
+  background-color: #ffa500; /* Orange color */
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Kettle Base */
+.kettle-base {
+  position: absolute;
+  top: 40px; /* Adjust based on the waist position */
+  left: 5px; /* Adjust to center it relative to the pot */
+  width: 150px; /* Full width relative to the pot size */
+  height: 130px; /* Height of the base */
+  background-color: silver; /* Silver color for the base */
+  border-radius: 0 0 10px 10px; /* Slightly rounded bottom */
+  z-index: 1;
 }
 
 
@@ -162,13 +220,13 @@
       <div class="triangle"></div>
     </div>
     <div class="kettle">
-  		   <div class="kettle-top"></div>
-     <div class="kettle-lid"></div>
-     <div class="kettle-handle"></div>
-     <div class="kettle-waist"></div>
-     <div class="kettle-base"></div>
-  <!-- Add more elements for the kettle spout and other details -->
-</div>
+  		    <div class="kettle-top"></div>
+      <div class="kettle-lid"></div>
+      <div class="kettle-handle"></div>
+      <div class="kettle-pot"></div>
+      <div class="kettle-waist"></div>
+      <div class="kettle-base"></div>
+				    </div>
 
     <div class="coffee can1">
       <!-- Add more elements for text and other details -->
