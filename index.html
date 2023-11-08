@@ -121,13 +121,35 @@
 /* Kettle Handle */
 .kettle-handle {
   position: absolute;
-  top: 40px; /* Adjust as needed, should be on the side of the pot */
-  left: -30px; /* Adjust as needed */
-  width: 20px; /* Adjust as needed */
-  height: 40px; /* Adjust as needed */
-  background-color: black; /* Black color for the handle */
-  border-radius: 10px; /* Adjust to match handle shape */
-  z-index: 1;
+  top: -90px; /* Adjust based on the kettle pot position */
+  left: 20px; /* Adjust so it's positioned to the side of the pot */
+  width: 20px; /* Width of the handle */
+  height: 80px; /* Height of the handle */
+  background-color: black;
+  z-index: 4; /* Ensure it's above other elements */
+  transform: rotate(-10deg); /* Adjust the angle to match the image perspective */
+}
+
+.kettle-handle::before,
+.kettle-handle::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  height: 20px; /* Half the handle width for a nice curve */
+  border-radius: 50%;
+  z-index: 11;
+}
+
+.kettle-handle::before {
+  top: -10px; /* Half the extra height, creates the top curve */
+  left: 0;
+  width: 36px; /* Match the handle width */
+}
+
+.kettle-handle::after {
+  bottom: -10px; /* Half the extra height, creates the bottom curve */
+  left: 0;
+  width: 23px; /* Match the handle width */
 }
   
 /* Kettle Pot */
