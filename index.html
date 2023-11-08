@@ -101,10 +101,19 @@
 /* Kettle */
 .kettle {
   position: absolute;
-  top: 250px; /* Adjust as needed */
+  top: 260px; /* Adjust as needed */
   left: 0px; /* Adjust as needed */
 }
 
+  /* Kettle Top */
+  .kettle-top{
+    height: 15px;
+    width: 10px;
+    position: absolute;
+    top: -170px;
+    left: 110px;
+    background-color: black;
+  }
 
 /* Kettle Lid */
 .kettle-lid {
@@ -141,9 +150,10 @@
 }
 
 .kettle-handle::before {
-  top: -10px; /* Half the extra height, creates the top curve */
+  top: -10px; /* Positioned to create the top part of the handle */
   left: 0;
-  width: 36px; /* Match the handle width */
+  width: 36px; /* Extend beyond the width of the handle to create the top edge */
+  border-radius: 10px 0 0 0; /* Only top-left corner is rounded */
 }
 
 .kettle-handle::after {
@@ -155,44 +165,47 @@
 /* Kettle Pot */
 .kettle-pot {
   position: absolute;
-  top: -129px; /* Adjust as needed */
-  left: 45px; /* Adjust as needed */
-  width: 149px; /* Adjust as needed */
-  height: 125px; /* Adjust as needed */
-  background-color: #ffa500; /* Base orange color */
-  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%); /* Adjusting the trapezoid shape */
+  top: -129px;
+  left: 45px;
+  width: 149px;
+  height: 125px;
   z-index: 2;
 }
 
+/* Panel Base Style */
 .panel {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 25%; /* Adjusted for four panels */
+  width: 25%;
 }
 
+/* First Panel - Leftmost panel */
 .panel:nth-child(1) {
   left: 0;
-  background: linear-gradient(to top right, #ffc77d, #ff7f00); /* Reversed gradient for the first panel */
-  clip-path: polygon(0 0, 66% 0, 100% 100%, 0 100%);
+  background: linear-gradient(to bottom right, #ffc77d, #ff7f00);
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
 }
 
+/* Second Panel - Solid color */
 .panel:nth-child(2) {
   left: 25%;
-  background: linear-gradient(to top, #ffcb85, #ffa500); /* Reversed gradient for the second panel */
-  clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%);
+  background: #ffa500; /* Solid color */
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
 }
 
+/* Third Panel - Lighter towards top left */
 .panel:nth-child(3) {
   left: 50%;
-  background: linear-gradient(to top, #ffcb85, #ffa500); /* Reversed gradient for the third panel */
-  clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%);
+  background: linear-gradient(to top left, #ffcb85, #ffa500); 
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
 }
 
+/* Fourth Panel - Darker towards bottom right */
 .panel:nth-child(4) {
-  right: 0;
-  background: linear-gradient(to top left, #ffc77d, #ff7f00); /* Reversed gradient for the fourth panel */
-  clip-path: polygon(0 0, 100% 0, 66% 100%, 0 100%);
+  left: 75%;
+  background: linear-gradient(to bottom right, #ffa500, #ff7f00); 
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
 }
 
 
@@ -213,15 +226,12 @@
   top: 16px; /* Adjust based on the waist position */
   left: 45px; /* Adjust to center it relative to the pot */
   width: 150px; /* Full width relative to the pot size */
-  height: 130px; /* Height of the base */
+  height: 120px; /* Height of the base */
   background-color: silver; /* Silver color for the base */
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%); /* Trapezoid shape */
   z-index: 1;
 }
 
-
-
-  
   
   </style>
 
