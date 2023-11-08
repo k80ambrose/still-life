@@ -107,10 +107,10 @@
 
   /* Kettle Top */
   .kettle-top{
-    height: 15px;
-    width: 10px;
+    height: 20px;
+    width: 15px;
     position: absolute;
-    top: -170px;
+    top: -179px;
     left: 110px;
     background-color: black;
   }
@@ -177,35 +177,35 @@
   position: absolute;
   top: 0;
   height: 100%;
-  width: 25%;
+  width: 25%; /* each panel will take up 25% of the width */
 }
 
 /* First Panel - Leftmost panel */
 .panel:nth-child(1) {
   left: 0;
   background: linear-gradient(to bottom right, #ffc77d, #ff7f00);
-  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Second Panel - Solid color */
 .panel:nth-child(2) {
   left: 25%;
   background: #ffa500; /* Solid color */
-  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
 }
 
 /* Third Panel - Lighter towards top left */
 .panel:nth-child(3) {
   left: 50%;
-  background: linear-gradient(to top left, #ffcb85, #ffa500); 
+  background: linear-gradient(to top left, #ffcb85, #ffa500);
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
 }
 
 /* Fourth Panel - Darker towards bottom right */
 .panel:nth-child(4) {
   left: 75%;
-  background: linear-gradient(to bottom right, #ffa500, #ff7f00); 
-  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  background: linear-gradient(to bottom right, #ffa500, #ff7f00);
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
 }
 
 
