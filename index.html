@@ -29,7 +29,7 @@
     #ffffff 100%
   );
   background-size: 100% 20%;
-      opacity: 80%;
+      opacity: 60%;
 }
 
   /* First Cup */
@@ -74,7 +74,7 @@
     
   .coffee {
     background-image: linear-gradient(#FDC90D 66%, red 30%);
-    opacity: 80%; 
+    opacity: 60%; 
     width: 30%;
     height: 40%;
     background-color: #FDC90D; /* Bright yellow color for Café Bustelo can */
@@ -101,19 +101,23 @@
 /* Kettle */
 .kettle {
   position: absolute;
-  top: 260px; /* Adjust as needed */
-  left: 0px; /* Adjust as needed */
+  top: 256px; /* Adjust as needed */
+  left: 5px; /* Adjust as needed */
+  opacity: 60%;
 }
 
   /* Kettle Top */
-  .kettle-top{
-    height: 20px;
-    width: 15px;
-    position: absolute;
-    top: -179px;
-    left: 110px;
-    background-color: black;
-  }
+.kettle-top{
+  height: 20px;
+  width: 15px;
+  position: absolute;
+  top: -179px;
+  left: 110px;
+  background-color: black;
+  border-top-left-radius: 10px; /* Adjust as needed */
+  border-top-right-radius: 10px; /* Adjust as needed */
+}
+
 
 /* Kettle Lid */
 .kettle-lid {
@@ -131,7 +135,7 @@
 .kettle-handle {
   position: absolute;
   top: -90px; /* Adjust based on the kettle pot position */
-  left: 20px; /* Adjust so it's positioned to the side of the pot */
+  left: 21px; /* Adjust so it's positioned to the side of the pot */
   width: 20px; /* Width of the handle */
   height: 80px; /* Height of the handle */
   background-color: black;
@@ -208,7 +212,7 @@
 .panel:nth-child(4) {
   left: 69%;
   background: linear-gradient(to bottom right, #ffa500, #ff7f00);
-  clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
   width: 31.5%; /* each panel will take up 25% of the width */
 }
 
