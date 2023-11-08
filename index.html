@@ -177,14 +177,14 @@
   position: absolute;
   top: 0;
   height: 100%;
-  width: 25%; /* each panel will take up 25% of the width */
 }
 
 /* First Panel - Leftmost panel */
 .panel:nth-child(1) {
   left: 0;
   background: linear-gradient(to bottom right, #ffc77d, #ff7f00);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 150% 150%, 40% 110%);
+  width: 34%; /* each panel will take up 25% of the width */
 }
 
 /* Second Panel - Solid color */
@@ -192,6 +192,7 @@
   left: 25%;
   background: #ffa500; /* Solid color */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+  width: 25%; /* each panel will take up 25% of the width */
 }
 
 /* Third Panel - Lighter towards top left */
@@ -199,15 +200,16 @@
   left: 50%;
   background: linear-gradient(to top left, #ffcb85, #ffa500);
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  width: 25%; /* each panel will take up 25% of the width */
 }
 
 /* Fourth Panel - Darker towards bottom right */
 .panel:nth-child(4) {
-  left: 75%;
+  left: 69%;
   background: linear-gradient(to bottom right, #ffa500, #ff7f00);
   clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+  width: 31.5%; /* each panel will take up 25% of the width */
 }
-
 
 /* Kettle Waist */
 .kettle-waist {
