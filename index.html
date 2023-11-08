@@ -18,7 +18,6 @@
   }
   
   .cup {
-    border: 1px solid black;
     width: 88px;
     height: 90px;
     position: relative; /* To position the handle */
@@ -33,36 +32,22 @@
       opacity: 80%;
 }
 
-/* Handle for the cup */
-.cup::after {
-  content: '';
-  position: absolute;
-  right: -20px;
-  top: 20px;
-  width: 20px;
-  height: 40px;
-  border: 3px solid black;
-  border-top: transparent;
-  border-bottom: transparent;
-  border-radius: 10px;
-}
-
   /* First Cup */
   .cup1 {
     position: absolute;
-    top: 315px;
+    top: 310px;
     left: 150px;
     z-index: 5;
-    scale: 90%;
+    scale: 95%;
   }
   
   /* Second Cup */
   .cup2 {
     position: absolute;
-    top: 210px;
+    top: 225px;
     left: 150px;
     z-index: 5;
-    scale: 90%;
+    scale: 95%;
   }
   
   /* Third Cup */
@@ -86,27 +71,18 @@
     height: 100%;
     position: absolute
   }
-  
-  .base {
-    clip-path: polygon(17% 69%, 80% 69%, 100% 100%, 0% 100%);
-    background-color: silver;
-  }
-  
+    
   .coffee {
     background-image: linear-gradient(#FDC90D 66%, red 30%);
     opacity: 80%; 
     width: 30%;
     height: 40%;
     background-color: #FDC90D; /* Bright yellow color for Café Bustelo can */
-  border: 1px solid #333; /* Representing the thin border of the can */
   }
-
   
-  
-.can1 {
+			.can1 {
   position: absolute;
   background-color: #FDC90D; /* Bright yellow color for Café Bustelo can */
-  border: 1px solid #333; /* Representing the thin border of the can */
   /* Add more styling details like gradients and text here */
   	top: 190px;
   left: 190px;
@@ -116,7 +92,6 @@
   .can2 {
   position: absolute;
   background-color: #FDC90D; /* Bright yellow color for Café Bustelo can */
-  border: 1px solid #333; /* Representing the thin border of the can */
   /* Add more styling details like gradients and text here */
 	  top: 200px;
   left: 270px;
@@ -130,40 +105,17 @@
   left: 0px; /* Adjust as needed */
 }
 
-/* Kettle Pot */
-.kettle-pot {
-  position: absolute;
-  top: -90px; /* Adjust as needed */
-  left: 10px; /* Adjust as needed */
-  width: 120px; /* Adjust as needed */
-  height: 80px; /* Adjust as needed */
-  background-color: #ffa500; /* Example orange color */
-  border-radius: 50px 50px 0 0; /* Rounded top, flat bottom */
-  z-index: 2;
-}
 
 /* Kettle Lid */
 .kettle-lid {
   position: absolute;
-  top: 1px; /* Adjust as needed */
+  top: -159px; /* Adjust as needed */
   left: 45px; /* Center relative to the kettle pot */
-  width: 50px; /* Adjust as needed */
-  height: 20px; /* Adjust as needed */
+  width: 150px; /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
   background-color: #ffa500; /* Orange color for the lid */
-  border-radius: 50%;
+  clip-path: ellipse(75px 30px at 50% 100%); /* Flipping the semi-circle */
   z-index: 3;
-}
-
-/* Kettle Top */
-.kettle-top {
-  position: absolute;
-  top: 50px; /* Adjust as needed, should be at the top of the pot
-  left: 10%; /* Center relative to the kettle pot */
-  width: 60%; /* Adjust as needed */
-  height: 10px; /* Adjust as needed */
-  background-color: black; /* Black color for the top */
-  border-radius: 50%;
-  z-index: 4;
 }
 
 /* Kettle Handle */
@@ -177,13 +129,57 @@
   border-radius: 10px; /* Adjust to match handle shape */
   z-index: 1;
 }
+  
+/* Kettle Pot */
+.kettle-pot {
+  position: absolute;
+  top: -129px; /* Adjust as needed */
+  left: 45px; /* Adjust as needed */
+  width: 149px; /* Adjust as needed */
+  height: 125px; /* Adjust as needed */
+  background-color: #ffa500; /* Base orange color */
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%); /* Adjusting the trapezoid shape */
+  z-index: 2;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%; /* Adjusted for four panels */
+}
+
+.panel:nth-child(1) {
+  left: 0;
+  background: linear-gradient(to top right, #ffc77d, #ff7f00); /* Reversed gradient for the first panel */
+  clip-path: polygon(0 0, 66% 0, 100% 100%, 0 100%);
+}
+
+.panel:nth-child(2) {
+  left: 25%;
+  background: linear-gradient(to top, #ffcb85, #ffa500); /* Reversed gradient for the second panel */
+  clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.panel:nth-child(3) {
+  left: 50%;
+  background: linear-gradient(to top, #ffcb85, #ffa500); /* Reversed gradient for the third panel */
+  clip-path: polygon(33% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.panel:nth-child(4) {
+  right: 0;
+  background: linear-gradient(to top left, #ffc77d, #ff7f00); /* Reversed gradient for the fourth panel */
+  clip-path: polygon(0 0, 100% 0, 66% 100%, 0 100%);
+}
+
 
 /* Kettle Waist */
 .kettle-waist {
   position: absolute;
   top: -4px; /* Adjust based on the pot height */
-  left: 65px; /* Center relative to the kettle pot */
-  width: 114px; /* The waist is narrower */
+  left: 61px; /* Center relative to the kettle pot */
+  width: 117px; /* The waist is narrower */
   height: 20px; /* Adjust as needed */
   background-color: #ffa500; /* Orange color */
   z-index: 2;
@@ -222,10 +218,16 @@
       <div class="triangle"></div>
     </div>
     <div class="kettle">
-  		    <div class="kettle-top"></div>
+  		  <div class="kettle-top"></div>
       <div class="kettle-lid"></div>
       <div class="kettle-handle"></div>
-      <div class="kettle-pot"></div>
+      <div class="kettle-pot">
+  	      <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+</div>
+
       <div class="kettle-waist"></div>
       <div class="kettle-base"></div>
 				    </div>
